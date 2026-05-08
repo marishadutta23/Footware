@@ -83,7 +83,7 @@ const handleHomeClick = () => {
   // ✅ ADD THIS EXACTLY HERE
   /*useEffect(() => {
     const fetchCoupons = async () => {
-      const res = await fetch("http://localhost:5000/api/coupons/admin", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/coupons", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
