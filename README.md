@@ -17,7 +17,7 @@ A full-stack MERN ecommerce application.
 - React.js
 - Vite
 - React Router
-- CSS
+- Tailwind CSS
 
 ### Backend
 - Node.js
