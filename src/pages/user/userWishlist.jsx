@@ -22,7 +22,7 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/user/profile", {
+        const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -101,7 +101,7 @@ export default function Wishlist() {
   useEffect(() => {
     const fetchWishlist = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/user/wishlist", {
+        const res = await fetch("https://footware-22xr.onrender.com/api/user/wishlist", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -123,7 +123,7 @@ export default function Wishlist() {
 
   const handleRemove = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/user/wishlist/${id}`, {
+      await fetch(`https://footware-22xr.onrender.com/api/user/wishlist/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -137,7 +137,7 @@ export default function Wishlist() {
   };
 
 const addToWishlist = async (productId) => {
-  await fetch("http://localhost:5000/api/user/wishlist", {
+  await fetch("https://footware-22xr.onrender.com/api/user/wishlist", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -150,7 +150,7 @@ const addToWishlist = async (productId) => {
 
 const handleAddToCart = async (item) => {
   try {
-    const res = await fetch("http://localhost:5000/api/cart", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

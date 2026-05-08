@@ -97,7 +97,7 @@ const handleHomeClick = () => {
   }, []);*/
 const fetchCoupons = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/coupons", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/coupons", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -116,7 +116,7 @@ useEffect(() => {
 
 
   const handleDelete = async (id) => {
-  await fetch(`http://localhost:5000/api/coupons/${id}`, {
+  await fetch(`https://footware-22xr.onrender.com/api/coupons/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -147,8 +147,8 @@ const handleSubmit = async (e) => {
   };
 
   const url = editCoupon
-    ? `http://localhost:5000/api/coupons/${editCoupon._id}`
-    : "http://localhost:5000/api/coupons";
+    ? `https://footware-22xr.onrender.com/api/coupons/${editCoupon._id}`
+    : "https://footware-22xr.onrender.com/api/coupons";
 
   const method = editCoupon ? "PUT" : "POST";
 

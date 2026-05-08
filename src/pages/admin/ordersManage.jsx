@@ -32,7 +32,7 @@ const handleHomeClick = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/admin/orders", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/admin/orders", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -54,7 +54,7 @@ const handleHomeClick = () => {
 
 
   const updateStatus = async (id, newStatus) => {
-  await fetch(`http://localhost:5000/api/admin/orders/${id}/status`, {
+  await fetch(`https://footware-22xr.onrender.com/api/admin/orders/${id}/status`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

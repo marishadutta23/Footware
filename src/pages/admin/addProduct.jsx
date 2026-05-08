@@ -78,7 +78,7 @@ useEffect(() => {
   if (!id) return; // 🟢 ADD MODE → do nothing
 
   const fetchProduct = async () => {
-    const res = await fetch(`http://localhost:5000/api/products/${id}`);
+    const res = await fetch(`https://footware-22xr.onrender.com/api/products/${id}`);
     const data = await res.json();
 
     setFormData({
@@ -136,8 +136,8 @@ const handleSubmit = async (e) => {
 
   // ✅ DIFFERENT REQUEST FOR ADD vs EDIT
   const url = id
-    ? `http://localhost:5000/api/products/${id}` // EDIT
-    : `http://localhost:5000/api/products`;      // ADD
+    ? `https://footware-22xr.onrender.com/api/products/${id}` // EDIT
+    : `https://footware-22xr.onrender.com/api/products`;      // ADD
 
   const method = id ? "PUT" : "POST";
 

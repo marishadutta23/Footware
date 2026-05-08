@@ -131,7 +131,7 @@ const handleSave = async (e) => {
     }
 
     // 👇 THIS IS WHERE YOUR FETCH GOES
-    const res = await fetch("http://localhost:5000/api/user/profile", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -193,7 +193,7 @@ useEffect(() => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/user/profile", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

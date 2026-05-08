@@ -60,7 +60,7 @@ useEffect(() => {
 
   const fetchReviews = async () => {
     const res = await fetch(
-      `http://localhost:5000/api/reviews/product/${id}`
+      `https://footware-22xr.onrender.com/api/reviews/product/${id}`
     );
     const data = await res.json();
     setReviews(data);
@@ -77,7 +77,7 @@ useEffect(() => {
   if (!id) return;
 
   const fetchProduct = async () => {
-    const res = await fetch(`http://localhost:5000/api/products/${id}`);
+    const res = await fetch(`https://footware-22xr.onrender.com/api/products/${id}`);
     const data = await res.json();
 
     setProduct(data);
@@ -97,7 +97,7 @@ useEffect(() => {
     if (!token) return;
 
     try {
-      const res = await fetch("http://localhost:5000/api/user/wishlist", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/user/wishlist", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -120,8 +120,8 @@ useEffect(() => {
 
   try {
     const url = editingReviewId
-      ? `http://localhost:5000/api/reviews/${editingReviewId}`
-      : `http://localhost:5000/api/reviews/${id}`;
+      ? `https://footware-22xr.onrender.com/api/reviews/${editingReviewId}`
+      : `https://footware-22xr.onrender.com/api/reviews/${id}`;
 
     const method = editingReviewId ? "PUT" : "POST";
 
@@ -145,7 +145,7 @@ useEffect(() => {
 
     // Refresh reviews
     const updated = await fetch(
-      `http://localhost:5000/api/reviews/product/${id}`
+      `https://footware-22xr.onrender.com/api/reviews/product/${id}`
     );
     setReviews(await updated.json());
   } catch (err) {
@@ -159,7 +159,7 @@ const handleDeleteReview = async (reviewId) => {
 
   try {
     const res = await fetch(
-      `http://localhost:5000/api/reviews/${reviewId}`,
+      `https://footware-22xr.onrender.com/api/reviews/${reviewId}`,
       {
         method: "DELETE",
         headers: {
@@ -196,7 +196,7 @@ useEffect(() => {
   if (!product?.category) return;
 
   const fetchRelated = async () => {
-    const res = await fetch("http://localhost:5000/api/products");
+    const res = await fetch("https://footware-22xr.onrender.com/api/products");
     const all = await res.json();
 
     const related = all.filter(
@@ -263,7 +263,7 @@ const getPriceInRupees = (price) => {
   }
 
   try {
-    await fetch("http://localhost:5000/api/cart", {
+    await fetch("https://footware-22xr.onrender.com/api/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -291,7 +291,7 @@ const handleBuyNow = async () => {
   }
 
   try {
-    await fetch("http://localhost:5000/api/cart", {
+    await fetch("https://footware-22xr.onrender.com/api/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -315,7 +315,7 @@ const handleBuyNow = async () => {
 
 const handleToggleWishlist = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/user/wishlist", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/user/wishlist", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

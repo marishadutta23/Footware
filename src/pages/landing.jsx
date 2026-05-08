@@ -13,7 +13,7 @@ const [pageConfig, setPageConfig] = useState(null);
 useEffect(() => {
   const fetchLandingData = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/landing");
+      const res = await fetch("https://footware-22xr.onrender.com/api/landing");
       const data = await res.json();
       setPageConfig(data);
     } catch (error) {

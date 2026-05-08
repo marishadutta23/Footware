@@ -91,7 +91,7 @@ if (!token) {
   return;
 }
 
-const res = await fetch("http://localhost:5000/api/admin/profile", {
+const res = await fetch("https://footware-22xr.onrender.com/api/admin/profile", {
   headers: {
     Authorization: `Bearer ${token}`,
   },
@@ -166,7 +166,7 @@ const handleSave = async () => {
       formData.append("profilePicture", selectedFile);
     }
 
-    const res = await fetch("http://localhost:5000/api/admin/profile", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/admin/profile", {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,

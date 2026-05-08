@@ -76,7 +76,7 @@ const ReviewPage = () => {
 
   useEffect(() => {
     const fetchReviews = async () => {
-      const res = await fetch("http://localhost:5000/api/reviews", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/reviews", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

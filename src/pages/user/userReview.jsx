@@ -95,7 +95,7 @@ const MyReviewsPage = () => {
 useEffect(() => {
   const fetchUser = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/user/profile", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -116,7 +116,7 @@ useEffect(() => {
 useEffect(() => {
   const fetchMyReviews = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/reviews/my", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/reviews/my", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -149,7 +149,7 @@ useEffect(() => {
   );
 
 const handleDelete = async (id) => {
-  await fetch(`http://localhost:5000/api/reviews/${id}`, {
+  await fetch(`https://footware-22xr.onrender.com/api/reviews/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,

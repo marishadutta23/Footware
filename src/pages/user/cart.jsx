@@ -135,7 +135,7 @@ const [cartItems, setCartItems] = useState([]);
 useEffect(() => {
   if (!token) return;
 
-  fetch("http://localhost:5000/api/cart", {
+  fetch("https://footware-22xr.onrender.com/api/cart", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -186,7 +186,7 @@ const handleQuantityChange = async (itemId, type) => {
 
   if (newQty <= 0) return;
 
-  await fetch(`http://localhost:5000/api/cart/${itemId}`, {
+  await fetch(`https://footware-22xr.onrender.com/api/cart/${itemId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -204,7 +204,7 @@ const handleQuantityChange = async (itemId, type) => {
 
   
 const handleRemoveItem = async (cartItemId) => {
-  await fetch(`http://localhost:5000/api/cart/${cartItemId}`, {
+  await fetch(`https://footware-22xr.onrender.com/api/cart/${cartItemId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -244,7 +244,7 @@ const handleRemoveItem = async (cartItemId) => {
   // Handle Checkout (This is the logic that checks the profile status)
 const handleCheckout = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/user/profile", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -298,7 +298,7 @@ const applyCoupon = async () => {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:5000/api/coupons/validate", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/coupons/validate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

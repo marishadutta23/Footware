@@ -70,7 +70,7 @@ const [products, setProducts] = useState([]);
   useEffect(() => {
   const fetchHomeData = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/home");
+      const res = await fetch("https://footware-22xr.onrender.com/api/home");
       const data = await res.json();
       setSlides(data.banners || []);
       setProducts(data.products || []);

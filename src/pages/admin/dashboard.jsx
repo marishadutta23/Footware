@@ -60,7 +60,7 @@ useEffect(() => {
   const fetchStats = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/admin/dashboard/stats",
+        "https://footware-22xr.onrender.com/api/admin/dashboard/stats",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -83,14 +83,14 @@ useEffect(() => {
   const fetchCharts = async () => {
     try {
       const salesRes = await fetch(
-        "http://localhost:5000/api/admin/sales",
+        "https://footware-22xr.onrender.com/api/admin/sales",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
 
       const countryRes = await fetch(
-        "http://localhost:5000/api/admin/countries",
+        "https://footware-22xr.onrender.com/api/admin/countries",
         {
           headers: { Authorization: `Bearer ${token}` },
         }

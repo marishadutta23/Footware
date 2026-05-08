@@ -92,7 +92,7 @@ const UserOrdersPage = () => {
   /* ===== Fetch user ===== */
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await fetch("http://localhost:5000/api/user/profile", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -104,7 +104,7 @@ const UserOrdersPage = () => {
   /* ===== Fetch orders ===== */
   useEffect(() => {
     const fetchOrders = async () => {
-      const res = await fetch("http://localhost:5000/api/orders/my-orders", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/orders/my-orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();

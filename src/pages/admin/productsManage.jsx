@@ -118,7 +118,7 @@ const ProductsManage = () => {
 
 useEffect(() => {
   const fetchProducts = async () => {
-    const res = await fetch("http://localhost:5000/api/products");
+    const res = await fetch("https://footware-22xr.onrender.com/api/products");
     const data = await res.json();
     setProducts(data);
   };
@@ -127,7 +127,7 @@ useEffect(() => {
 
 
 const handleDelete = async (id) => {
-  await fetch(`http://localhost:5000/api/products/${id}`, {
+  await fetch(`https://footware-22xr.onrender.com/api/products/${id}`, {
     method: "DELETE",
   });
   setProducts(products.filter((p) => p._id !== id));
@@ -148,7 +148,7 @@ const handleSave = async () => {
   });
 
   const res = await fetch(
-    `http://localhost:5000/api/products/${editingProduct}`,
+    `https://footware-22xr.onrender.com/api/products/${editingProduct}`,
     {
       method: "PUT",
       body: formData,

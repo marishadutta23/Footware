@@ -103,7 +103,7 @@ const CouponPage = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/user/profile", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -128,7 +128,7 @@ useEffect(() => {
 
   const fetchCoupons = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/coupons/public", {
+      const res = await fetch("https://footware-22xr.onrender.com/api/coupons/public", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -166,7 +166,7 @@ const filteredCoupons = Array.isArray(fetchedCoupons)
 
 const handleClaim = async (coupon) => {
   try {
-    const res = await fetch("http://localhost:5000/api/coupons/validate", {
+    const res = await fetch("https://footware-22xr.onrender.com/api/coupons/validate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -192,7 +192,7 @@ const handleClaim = async (coupon) => {
     setPopup(`Coupon ${coupon.code} applied successfully!`);
 
     // ✅ REFRESH COUPONS
-    const refreshed = await fetch("http://localhost:5000/api/coupons/public", {
+    const refreshed = await fetch("https://footware-22xr.onrender.com/api/coupons/public", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
